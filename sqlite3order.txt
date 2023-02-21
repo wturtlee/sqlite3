@@ -1,0 +1,29 @@
+#導入 sqlite3模組
+import sqlite3
+
+#連結資料庫
+conn = sqlite3.connect('資料庫檔案')
+
+#SQL語句
+cursor.execute('SELECT * FROM `資料庫名字`;')
+
+#查詢結果
+records = cursor.fetchall()
+
+#新增資料
+sql = """
+INSERT INTO 資料庫名字 (欄位名,欄位名,欄位名,欄位名)
+VALUES ('欄位值','欄位值','欄位值','欄位值');
+"""
+
+#修改資料
+sql = """
+update 資料庫名字
+set 欄位名 = '欄位值' , 欄位名 = '欄位值' , 欄位名 = '欄位值'
+"""
+
+#刪除資料
+sql = """
+delete from 資料庫名字
+where id = {};
+""".format()
